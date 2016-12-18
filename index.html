@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leap solutions</title>
+
+	<style>
+
+		@import url(http://zavoloklom.github.io/material-design-iconic-font/css/docs.md-iconic-font.min.css);
+
+		body {
+				padding: 0px;
+				margin: 0px;
+				background-color: #1e1e1e;
+				overflow: hidden;
+				font-family: Roboto;
+		}
+
+		#mainlogo {
+			left: calc(50vw - 50%);
+			padding: 0px;
+		}
+
+		#mainlogo img {
+			top: 5vh;
+			left: calc(50vw - 90vh * 1920 / 1080 / 2);
+			position: absolute;
+			height: 90vh;
+			z-index: -1;
+		}
+
+		#mainlogo #inv {
+			text-align: center;
+			margin-top: 25vh;
+		}
+
+		#mainlogo h1, #mainlogo h3{
+			color: #fefefe;
+			font-weight: lighter;
+		}
+
+		#mainlogo h1 {
+			margin-bottom: 40vh;
+		}
+
+		#mainlogo h3{
+			opacity: 0.6;
+		}
+
+		input{
+			/*display: inline-block;*/
+			margin: 10px 30%;
+			width: 200px;
+			padding: 5px 10px;
+			text-align: center;
+			border: none;
+			border-radius: 15px;
+			background-color: rgba(255, 255, 255, 0.6);
+			transition: 0.2s ease-in-out;
+			font-size: 14px;
+		}
+
+		input:focus{
+			background-color: rgba(255, 255, 255, 1);
+			transition: 0.2s ease-in-out;
+		}
+
+		input::-webkit-input-placeholder {
+			color:#000000;
+			opacity: 0.5;
+			font-size: 14px;
+		}
+
+		button {
+			border: none;
+			color: #000000;
+			background-color: rgba(255, 255, 255, 0.6);
+			transition: 0.3s ease-in-out;
+			padding: 5px;
+			margin: 10px calc(50% - 50px);
+			font-size: 14px;
+			border-radius: 3px;
+		}
+
+		button:hover {
+			background-color: rgba(255, 255, 255, 0.9);
+			transition: 0.1s ease-in-out;
+			opacity: 1;
+		}
+
+		#layer2 {
+			transform: scale(0);
+			animation: 
+				l2 0.3s ease-out 0.4s forwards, 
+				l21 2s linear 0.7s infinite, 
+				l22 4s linear 2.8s infinite forwards;
+				/*endscale 0.3s linear 5s forwards;*/
+		}
+
+		@keyframes l2{
+			0% {
+				transform: scale(0);
+			}
+			100% {
+				transform: scale(1);
+			}
+		}
+
+		@keyframes l21{
+			0% {
+				transform: rotate(0deg);
+			}
+			100% {
+				transform:  rotate(360deg) ;
+			}
+		}
+
+		@keyframes l22{
+			0% {
+				opacity: 1;		
+			}
+
+			80% {
+				opacity: 1;		
+			}
+
+			90% {
+				opacity: 0;		
+			}
+
+			93% {
+				opacity: 0;
+			}
+			94% {
+				opacity: 1;		
+			}
+			95% {
+				opacity: 0;		
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div id="mainframe">
+		<div id="mainlogo">
+		 	<img src="https://habrastorage.org/files/4f3/807/85a/4f380785a13e426a86bd0424175cb23a.png" id="layer2"/>
+			<div id="inv">
+				<h1>Скоро</h1>
+				<h3>Прикоснись к инновациям первым</h3>
+				<input type="email" name="inv" placeholder="email" />
+				<button>отправить</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
